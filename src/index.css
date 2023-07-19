@@ -18,7 +18,7 @@ code {
 }
 
 
-/* ///////// */
+/* navbar */
 nav {
   @apply absolute bg-stone-900 shadow shadow-cyan-50 w-full left-0 right-0 p-5 z-50 transition-all duration-200 lg:relative lg:bg-transparent lg:shadow-none lg:p-0 lg:z-auto lg:w-auto;
   top: -100vh;
@@ -60,7 +60,7 @@ p {
 }
 h1,h2,h3{
   color: white;
-  font:200 1.3rem sans-serif;
+  font:200 1.2rem sans-serif;
 }
 
 li{
@@ -93,7 +93,7 @@ li{
 }
 
 .articles {
-  @apply bg-yellow-900 p-5 rounded-lg shadow shadow-red-800 text-white text-sm;
+  @apply bg-yellow-900 p-5 rounded-lg shadow shadow-red-800 text-white text-sm  bg-gradient-to-r from-red-500 to-red-800;
 }
 
 /* spinner component styling */
@@ -152,4 +152,24 @@ li{
 
 .pagination__selected{
   background-color: rgb(220, 220, 220);
+}
+
+/*Rockets images */
+img{
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+  margin-bottom: 3px;
+}
+
+/* sorting capsules styling */
+.sortcapsules{
+  color: white;
+  /* background-color: aquamarine; */
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+}
+.sort-selection{
+  color: black;
 }

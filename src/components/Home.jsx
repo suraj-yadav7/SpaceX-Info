@@ -1,23 +1,16 @@
 import React, { useEffect, useState } from "react";
 import LoadingSpinner from "./LoadingSpinner";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCompnayDetails } from "../store/slices/mainSlices";
 
 const Home = () => {
-  const [company, setCompany] = useState("");
-  const fetchCompnayDetails = async () => {
-    await fetch("https://api.spacexdata.com/v4/company")
-      .then((response) => {
-        return response.json();
-      })
-      .then((result) => {
-        console.log("result", result);
-        setCompany(result);
-      })
-      .catch((error) =>
-        console.log("Error Occurred while fetching API Data", error)
-      );
-  };
+  // accessing company details from mainSlices
+  const company = useSelector((state)=> state.itemInfo.companyData)
+
+  //dispatching function to fetch API data of company
+  const dispatch = useDispatch()
   useEffect(() => {
-    fetchCompnayDetails();
+    dispatch(fetchCompnayDetails());
   }, []);
   return (
     <>
