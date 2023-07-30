@@ -19,7 +19,7 @@ const Home = () => {
         <div className="overlay">
           <article>
             <h1 className="heading text-center capitalize">{company.name}</h1>
-            <h3 className="text-center my-5">{company.summary}</h3>
+            <h3 className="text-center my-8 mx-40">{company.summary}</h3>
             <div className="companyDetails">
               <article>
                 <h3>About Company</h3>

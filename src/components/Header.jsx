@@ -28,6 +28,14 @@ const Header = () => {
                 Rockets
               </Link>
             </li>
+            <li>
+              <Link
+                to="/crew"
+                className=" text-white text-sm lg:text-base"
+              >
+                Crew
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
